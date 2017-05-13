@@ -1,0 +1,48 @@
+<html>
+    <head>
+         <script type="text/javascript" data-main="./scripts/crm-app/main"
+            src="./scripts/resources/requirejs/require.js"></script>
+         <link rel="stylesheet" type="text/css" href="./scripts/resources/bootstrap/dist/css/bootstrap.min.css"/>
+        <link rel="stylesheet" type="text/css" href="./scripts/resources/AngularJS-Toaster/toaster.min.css"/>
+    </head>
+    <body id='crm-app' class="container-fluid"><div ng-controller="customerController">       
+        <fieldset>
+            <div>
+                <table class="table table-striped">
+                  
+                    <tfoot>
+                        <tr>
+                            <td>
+                                <a ui-sref="create">
+                                 <!-- <input type="button" value="Create" ng-click="changeFlagVal_insert()" />-->
+                                   <button type="button" class="btn btn-primary" ng-click="changeFlagVal_insert()">Create</button>
+                                </a>
+                            </td>
+                            <td>
+                                <a ui-sref="update">
+                                   <!-- <input type="button" value="Update" ng-click="changeFlagVal_update()" />-->
+                                    <button type="button" class="btn btn-primary" ng-click="changeFlagVal_update()">Update</button>
+                                </a>
+                            </td>
+                            <td>
+                                <a ui-sref="delete">
+                                  <!--  <input type="button" value="Delete" ng-click="changeFlagVal_delete()"/>-->
+                                    <button type="button" class="btn btn-primary" ng-click="changeFlagVal_delete()">Delete</button>
+                                </a>
+                            </td>
+
+                        </tr>
+                    </tfoot>
+                </table>
+
+            </div>
+        </fieldset>
+        <div>
+            <div ui-view></div>
+        </div>
+    </div>
+    <toaster-container></toaster-container>
+                                                                                                                   
+    </body>
+    
+</html>

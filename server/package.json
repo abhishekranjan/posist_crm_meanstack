@@ -1,0 +1,33 @@
+{
+  "name": "posist_crm_server",
+  "version": "1.0.0",
+  "description": "It's a assignement and need to be complete with mean stack.",
+  "main": "server.js",
+  "scripts": {
+    "test": "posist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ajaiswal595/posist_crm_meanstack.git"
+  },
+  "keywords": [
+    "customer",
+    "create",
+    "delete",
+    "update",
+    "read",
+    "discount"
+  ],
+  "author": "ajaiswal595@gmail.com",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/ajaiswal595/posist_crm_meanstack/issues"
+  },
+  "homepage": "https://github.com/ajaiswal595/posist_crm_meanstack#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "mongoose": "^4.9.8",
+    "mssql": "^4.0.4"
+  }
+}
