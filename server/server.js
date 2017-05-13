@@ -20,7 +20,7 @@
 
 
         /*app.use('/static', express.static('/views'));*/
- console.log(__dirname);
+        console.log(__dirname);
         app.use(express.static(__dirname + '/client'));
         console.log(__dirname);
         app.get('/', function (req, res) {
