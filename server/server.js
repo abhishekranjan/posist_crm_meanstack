@@ -28,7 +28,7 @@
         //insert
 
         app.post('/insertCustomer', function (req, res) {
-            
+
             customerDbController.insertCustomer(req, res);
         });
 

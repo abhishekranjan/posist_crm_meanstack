@@ -1,15 +1,15 @@
     define([], function () {
 
-        function customerController($scope, $http, toaster,customerServices) {
-            
+        function customerController($scope, $http, toaster, customerServices) {
+
             console.log(customerServices);
-            
+
             $scope.addCustomer = customerServices.addCustomer;
-            $scope.deleteCustomer=customerServices.deleteCustomer;
-            $scope.updateCustomer=customerServices.updateCustomer;
-            $scope.getAllCustomer=customerServices.getAllCustomer;
-            
-            $scope.customer={};
+            $scope.deleteCustomer = customerServices.deleteCustomer;
+            $scope.updateCustomer = customerServices.updateCustomer;
+            $scope.getAllCustomer = customerServices.getAllCustomer;
+
+            $scope.customer = {};
             $scope.customer.addresses = [{
                 flat: "",
                 street: "",
@@ -28,6 +28,6 @@
             };
         }
 
-        customerController.$inject = ['$scope', '$http', 'toaster','customerServices'];
+        customerController.$inject = ['$scope', '$http', 'toaster', 'customerServices'];
         return customerController;
     });

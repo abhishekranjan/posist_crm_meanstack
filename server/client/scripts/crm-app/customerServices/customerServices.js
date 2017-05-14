@@ -1,7 +1,7 @@
 define([], function () {
     "use strict";
 
-    function customerServices($http, $q, $location,toaster) {
+    function customerServices($http, $q, $location, toaster) {
         return {
             addCustomer: addCustomer,
             deleteCustomer: deleteCustomer,
@@ -10,24 +10,24 @@ define([], function () {
         }
 
         function addCustomer() {
-            
+
             console.log(this.customer);
 
             console.log("add Customer working");
             console.log($location.protocol() + "://" + $location.host() + ":" + $location.port())
             var uri = $location.protocol() + "://" + $location.host() + ":" + $location.port();
-          
+
             var resultDefer = $q.defer();
             $http({
                 method: 'post',
                 url: uri + "/insertCustomer",
-                params:this.customer
+                params: this.customer
             }).then(function (response) {
                 resultDefer.resolve(response);
-                 toaster.pop("Success","Customer Added Successfully");
+                toaster.pop("Success", "Customer Added Successfully");
             }, function (error) {
                 resultDefer.reject(data);
-                toaster.pop("error",data);
+                toaster.pop("error", data);
             });
 
             // return resultDefer.promise;
@@ -60,7 +60,7 @@ define([], function () {
 
 
     } //reportService
-    customerServices.$inject = ["$http", "$q", "$location","toaster"];
+    customerServices.$inject = ["$http", "$q", "$location", "toaster"];
 
     return customerServices;
 

@@ -1,5 +1,5 @@
-exports.costomerDbConnection = function(){
-   return {
-     monogoUrl:''  
-   }; 
+exports.costomerDbConnection = function () {
+    return {
+        monogoUrl: ''
+    };
 };
