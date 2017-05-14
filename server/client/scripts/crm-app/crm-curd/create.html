@@ -1,26 +1,5 @@
 <div>
-
-    <!-- <form ng-submit="insert_customer()">
-        <fieldset>
-            <legend>Add Customer</legend>
-        <br>
-        <label>Name</label>
-        <input type="text" ng-model="custName" name="customerName">
-        <br>
-        <label>Mobile</label>
-        <input type="text" ng-model="custMobile" name="mobileNumber">
-        <br>
-        <label>Phone</label>
-        <input type="text" ng-model="custPhone" name="phoneNumber">
-        <br>
-        <label>Email</label>
-        <input type="text" ng-model="custEmail" name="email">
-        <br>
-        <input type="submit" id="submit" value="Submit">
-            </fieldset>
-    </form>
-        -->
-    <form>
+    <form ng-submit="addCustomer()">
         <div class="form-group">
             <label>Name</label>
             <input type="text" ng-model="customer.custName" name="customerName" class="form-control" placeholder="Enter Name">
@@ -34,7 +13,7 @@
             <label>Email</label>
             <input type="text" ng-model="customer.custEmail" name="email" class="form-control" placeholder="Enter email">
             <br>
-            <div class="form-group" data-ng-repeat="address in addresses">
+            <div class="form-group" data-ng-repeat="address in customer.addresses">
                 <label>Address {{$index+1}}</label><br>
                 <label>FlatNumber</label>
                 <input type="text" ng-model="address.flat" name="" class="form-control" placeholder="Entere Flat Number">
@@ -45,12 +24,8 @@
                 <label>Pin Code</label>
                 <input type="text" ng-model="address.pinCode" name="" class="form-control" placeholder="Entere PinCode">
 
-<!--                <label for="address" ng-show="showAddressLabel(address)">Choices</label>-->
-               
             </div>
-             <button  ng-click="addNewAddress()" class="btn btn-primary">add another address</button>
-
-
+            <button ng-click="addNewAddress()" class="btn btn-primary">add another address</button>
 
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>

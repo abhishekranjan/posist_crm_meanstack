@@ -1,21 +1,33 @@
-<div >
-    <div>
-        <h3>Enter Customer Details To update</h3>
-    </div>
-    <form ng-submit="update_student()">
-        <br>
-        <label>Name</label>
-        <input type="text" ng-model="custName" name="customerName">
-        <br>
-        <label>Mobile</label>
-        <input type="text" ng-model="custMobile" name="mobileNumber">
-        <br>
-        <label>Phone</label>
-        <input type="text" ng-model="custPhone" name="phoneNumber">
-        <br>
-        <label>Email</label>
-        <input type="text" ng-model="custEmail" name="email">
-        <br>
-        <input type="submit" id="submit" value="Submit">
+<div>
+    <form>
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" ng-model="customer.custName" name="customerName" class="form-control" placeholder="Enter Name">
+            <br>
+            <label>Mobile</label>
+            <input type="text" ng-model="customer.custMobile" name="mobileNumber" class="form-control" placeholder="Enter Mobile">
+            <br>
+            <label>Phone</label>
+            <input type="text" ng-model="customer.custPhone" name="phoneNumber" class="form-control" placeholder="Enter PhoneNumber">
+            <br>
+            <label>Email</label>
+            <input type="text" ng-model="customer.custEmail" name="email" class="form-control" placeholder="Enter email">
+            <br>
+            <div class="form-group" data-ng-repeat="address in addresses">
+                <label>Address {{$index+1}}</label><br>
+                <label>FlatNumber</label>
+                <input type="text" ng-model="address.flat" name="" class="form-control" placeholder="Entere Flat Number">
+                <label>Street</label>
+                <input type="text" ng-model="address.street" name="" class="form-control" placeholder="Entere Street">
+                <label>State</label>
+                <input type="text" ng-model="address.state" name="" class="form-control" placeholder="Entere State">
+                <label>Pin Code</label>
+                <input type="text" ng-model="address.pinCode" name="" class="form-control" placeholder="Entere PinCode">
+               
+            </div>
+             <button  ng-click="addNewAddress()" class="btn btn-primary">add another address</button>
+
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 </div>
