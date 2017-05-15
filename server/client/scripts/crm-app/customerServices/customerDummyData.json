@@ -1,0 +1,44 @@
+[  
+   {  
+      "name":"ajay",
+      "mobile":"8801001486",
+      "phone":"48657",
+      "dob":"20/05/1992",
+      "email":"ajaiswal595@gmail.com",
+      "Address":[  
+         {  
+            "flat":201,
+            "street":"street 201",
+            "state":"uttar pradesh",
+            "pinCode":273305
+         },
+         {  
+            "flat":401,
+            "street":"street 401",
+            "state":"uttar pradesh",
+            "pinCode":273305
+         }
+      ]
+   },
+   {  
+      "name":"neha",
+      "mobile":"89999999100",
+      "phone":"48657",
+      "dob":"20/05/1992",
+      "email":"ajasdfgiswalsafsa595@gmail.com",
+      "Address":[  
+         {  
+            "flat":203241,
+            "street":"street 202341",
+            "state":"uttar pradesh",
+            "pinCode":273305
+         },
+         {  
+            "flat":401,
+            "street":"street 423401",
+            "state":"uttar p32radesh",
+            "pinCode":273305
+         }
+      ]
+   }
+]

@@ -1,6 +1,6 @@
 define([], function () {
     function config($stateProvider, $urlRouterProvider) {
-        $stateProvider.state('/', {
+        $stateProvider.state('select', {
             url: '/select',
             templateUrl: 'scripts/crm-app/crm-curd/select.html'
         })

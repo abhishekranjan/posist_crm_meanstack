@@ -2,12 +2,25 @@
 
         function customerController($scope, $http, toaster, customerServices) {
 
-            console.log(customerServices);
+            
 
             $scope.addCustomer = customerServices.addCustomer;
             $scope.deleteCustomer = customerServices.deleteCustomer;
             $scope.updateCustomer = customerServices.updateCustomer;
-            $scope.getAllCustomer = customerServices.getAllCustomer;
+            $scope.getAllCustomer =
+
+                $scope.getAllCustomer = function () {
+                    var promise = customerServices.getAllCustomer();
+                    
+                
+                    promise.then(function (data) {
+                        console.log(data);
+                        $scope.customers=data;
+                    }, function (error) {
+                        console.error(data);
+                    })
+                    console.log($scope.customers);
+                }
 
             $scope.customer = {};
             $scope.customer.addresses = [{

@@ -15,18 +15,23 @@
                     <tfoot>
                         <tr>
                             <td>
+                                <a ui-sref="select">
+                                    <button type="button" class="btn btn-primary" >Get All Customer</button>
+                                </a>
+                            </td>
+                            <td>
                                 <a ui-sref="create">
-                                    <button type="button" class="btn btn-primary" ng-click="changeFlagVal_insert()">Create</button>
+                                    <button type="button" class="btn btn-primary" >Create</button>
                                 </a>
                             </td>
                             <td>
                                 <a ui-sref="update">
-                                    <button type="button" class="btn btn-primary" ng-click="changeFlagVal_update()">Update</button>
+                                    <button type="button" class="btn btn-primary" >Update</button>
                                 </a>
                             </td>
                             <td>
                                 <a ui-sref="delete">
-                                    <button type="button" class="btn btn-primary" ng-click="changeFlagVal_delete()">Delete</button>
+                                    <button type="button" class="btn btn-primary">Delete</button>
                                 </a>
                             </td>
 
@@ -38,8 +43,7 @@
         </fieldset>
         <div>
             <div ui-view></div>
-        </div>
-        <button ng-click="addCustomer()">add customer</button>
+        </div>      
     </div>
     <toaster-container></toaster-container>
 

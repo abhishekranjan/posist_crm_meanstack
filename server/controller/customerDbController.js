@@ -1,4 +1,4 @@
-var mongoConnection = require('../helper/dbConnectionHelper.js');
+var mongoConnection = require('../models/customer.js');
 
 exports.insertCustomer = function (req, res) {
 

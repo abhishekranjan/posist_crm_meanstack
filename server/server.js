@@ -2,6 +2,13 @@
         var app = express();
         var path = require('path');
         var bodyParser = require('body-parser');
+        var mongoose = require('mongoose');
+        mongoose.connect('mongodb://localhost:27017/posist_crm_db');
+
+
+        //console.log(mongoose);
+
+
 
         var customerDbController = require('./controller/customerDbController.js');
 
@@ -27,7 +34,7 @@
 
         //insert
 
-        app.post('/insertCustomer', function (req, res) {
+        app.post('/customer/insertCustomer', function (req, res) {
 
             customerDbController.insertCustomer(req, res);
         });
@@ -36,7 +43,7 @@
 
         //select
 
-        app.get('/select', function (req, res) {
+        app.get('/customer/select', function (req, res) {
 
             customerDbController.queryCustomer(req, res);
 
@@ -46,7 +53,7 @@
 
         //update
 
-        app.put('/update', function (req, res) {
+        app.put('/customer/update', function (req, res) {
 
             customerDbController.updateCustomer(req, res);
         });
@@ -54,7 +61,7 @@
 
         //delete 
 
-        app.post('/delete', function (req, res) {
+        app.post('/customer/delete', function (req, res) {
 
             customerDbController.deleteCustomer(req, res);
 
