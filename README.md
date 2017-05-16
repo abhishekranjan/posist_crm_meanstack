@@ -1,5 +1,5 @@
 # posist_crm_meanstack
-It's a assignement for posist to build a web app using mean stack.
+It's a assignement  to build a web app using mean stack.
 
 I strived a lot to complete but is seems it will take more time because i have to explore on mongo db.
 
