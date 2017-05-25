@@ -1,2 +1,3 @@
 added develop.txt 
+one line added into master
 one line added for stash
