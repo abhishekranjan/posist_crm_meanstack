@@ -44,7 +44,8 @@
 
         //select
 
-        app.get('/customer/select', function (req, res) {
+//added another comment at line 47.        
+app.get('/customer/select', function (req, res) {
 
             customerDbController.queryCustomer(req, res);
 
