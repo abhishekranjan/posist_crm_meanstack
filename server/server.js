@@ -12,6 +12,7 @@
 
         var customerDbController = require('./controller/customerDbController.js');
 
+        //added comment in develop branch to check merge        
         app.use(bodyParser.json()); // support json encoded bodies
         app.use(bodyParser.urlencoded({
             extended: true
