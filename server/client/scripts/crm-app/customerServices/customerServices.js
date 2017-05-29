@@ -52,9 +52,9 @@ define([], function () {
         function getAllCustomer() {
            
             var resultDefer = $q.defer();
-            $http.get('/scripts/crm-app/customerServices/customerDummyData.json').then(function (data) {
-                console.log(data);
-                resultDefer.resolve(data);
+            $http.get('/scripts/crm-app/customerServices/customerDummyData.json').then(function (res) {
+                console.log(res.data);
+                resultDefer.resolve(res.data);
               
             });
 
