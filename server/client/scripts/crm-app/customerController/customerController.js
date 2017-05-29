@@ -7,6 +7,7 @@
             $scope.addCustomer = customerServices.addCustomer;
             $scope.deleteCustomer = customerServices.deleteCustomer;
             $scope.updateCustomer = customerServices.updateCustomer;
+           
             $scope.getAllCustomer =
 
                 $scope.getAllCustomer = function () {
